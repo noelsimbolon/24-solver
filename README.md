@@ -21,7 +21,7 @@ For Ace, Jack, Queen, and King, their values are 1, 11, 12, and 13 respectively.
 2. Open your terminal and navigate to the `bin` directory
 3. Execute the `Play` class using `java`
     ```shell
-    java Play
+    java com/solver/Play
     ```
 4. Follow further instructions
 
