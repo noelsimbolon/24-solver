@@ -5,8 +5,7 @@ import java.io.PrintWriter;
 import java.util.*;
 
 /**
- * The {@code Game} class implements everything in the game:
- * user input, input validation, solution finding, and file output.
+ * The {@code Game} class implements user input, input validation, solution finding, and file output.
  */
 public class Game {
 
@@ -162,10 +161,10 @@ public class Game {
      */
     void findSolutions() {
 
-        System.out.printf("%d %d %d %d\n", cards[0], cards[1], cards[2], cards[3]);
+        System.out.printf("Corresponding numeric values: %d %d %d %d\n", cards[0], cards[1], cards[2], cards[3]);
 
         // Constucts a new empty ArrayList of Strings
-        this.solutions = new ArrayList<>();
+        this.solutions = new ArrayList<String>();
 
         double startTime = System.nanoTime();
 
@@ -1224,6 +1223,10 @@ public class Game {
      */
     void savePrompt() {
 
+        if (this.solutions.size() == 0) {
+            return;
+        }
+
         System.out.print("""
                 Do you want to save the solutions to a text file?
                 1. Yes
@@ -1311,6 +1314,6 @@ public class Game {
      * used to find all possible solutions to the puzzle.
      */
     void printExecutionTime() {
-        System.out.printf("Execution time: %.7f seconds\n", this.executionTime);
+        System.out.printf("Execution time: %.7f second\n", this.executionTime);
     }
 }
