@@ -16,13 +16,24 @@ For Ace, Jack, Queen, and King, their values are 1, 11, 12, and 13 respectively.
 ## Prerequisites
 - [Oracle OpenJDK 17](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)
 
+## Directory Structure
+```
+├── bin        # Contains executable class
+├── doc        # Contains report for the project
+├── src        # Contains source code for the program
+├── test       # Contains output files for tests done as documented in the report
+...
+```
+
 ## How To Use
 1. Download this repository as a ZIP file and extract it
 2. Open your terminal and navigate to the `bin` directory
 3. Execute the `Play` class using `java`
+   
     ```shell
     java com/solver/Play
     ```
+    
 4. Follow further instructions
 
 ## Author
