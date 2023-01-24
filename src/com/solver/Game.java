@@ -207,7 +207,7 @@ public class Game {
                         //
                         // The reason for all possible permutations with zero and one pair of brackets are not
                         // included is because their semantic would be similar with other solutions.
-                        // For example, given four integers 4, 2, 1, and 4,these solutions have similar semantics:
+                        // For example, given four integers 4, 2, 1, and 4, these solutions have similar semantics:
                         // (4 + 2) * 1 * 4
                         // (1 * 4) * (2 + 4)
                         //
@@ -217,6 +217,12 @@ public class Game {
                         //
                         // So, all possible permutations with zero and one pair of brackets are not computed
                         // to minimize the number of solutions with similar semantics.
+                        //
+                        // Many if blocks are used for checking, there are 320 of them to be exact
+                        // (64 possible operator permutations * 5 significant parentheses permutations).
+                        // The reason why this method is chosen is that it is much more straightforward and
+                        // easy to understand compared to methods using recursion or other methods as they are
+                        // bound to be more difficult to comprehend.
 
                         // ((a op b) op c) op d
                         if (((a + b) + c) + d == TARGET) {
